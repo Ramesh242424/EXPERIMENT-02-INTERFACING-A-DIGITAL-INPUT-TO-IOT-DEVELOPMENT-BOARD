@@ -102,7 +102,7 @@ IR technology is used in a wide range of wireless applications which includes re
 ## STM 32 CUBE PROGRAM
 
 ```
-// Your STM /* USER CODE BEGIN Header */
+/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * @file           : main.c
@@ -147,14 +147,10 @@ void IRPAIR()
 		if(IRSENSOR==0)
 		{
 			HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_SET);
-			HAL_Delay(1000);
-			HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_RESET);
-			HAL_Delay(1000);
 		}
 		else
 		{
 			HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_RESET);
-			HAL_Delay(1000);
 		}
 }
 void SystemClock_Config(void)
@@ -258,7 +254,8 @@ void assert_failed(uint8_t *file, uint32_t line)
      ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
   /* USER CODE END 6 */
 }
-#endif /* USE_FULL_ASSERT */32 CUBE Program code here
+#endif /* USE_FULL_ASSERT */
+
 ```
 
 ## OUTPUT
